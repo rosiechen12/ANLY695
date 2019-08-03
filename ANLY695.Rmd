@@ -1,0 +1,31 @@
+---
+title: "Income Data by Xiu Chen"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Import Dataset and review
+
+
+
+```{r}
+Income_Data <- read.csv("Income Data.csv")
+summary(Income_Data)
+```
+
+
+```{r}
+str(Income_Data)
+```
+## Correlation Matrix
+
+```{r}
+library(corrplot)
+plot(Income_Data$All_workers,Income_Data$All_weekly)
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
